@@ -1,0 +1,21 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["node_modules"]
+  },
+  "rules": {
+    "no-implicit-dependencies": false,
+    "object-literal-sort-keys": false,
+    "no-console": true,
+    "no-this-assignment": [true, { "allowed-names": ["^self$"], "allow-destructuring": true }],
+    "jsdoc-format": false,
+    "interface-name": false,
+    "no-bitwise": false,
+    "no-submodule-imports": false,
+    "radix": false,
+    "only-arrow-functions": false,
+    "variable-name": {
+      "options": ["ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"]
+    }
+  }
+}

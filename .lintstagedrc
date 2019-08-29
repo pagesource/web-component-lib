@@ -1,0 +1,15 @@
+{
+  "**/*.{js,json,scss,tsx}": [
+    "prettier --write",
+    "git add"
+  ],
+  "**/*.scss" : [
+    "yarn run lint:style",
+    "git add"
+  ],
+  "**/*.{tsx,ts}" : [
+    "yarn run test",
+    "yarn run lint",
+    "git add"
+  ]
+}

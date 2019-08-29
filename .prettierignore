@@ -1,0 +1,9 @@
+dist/
+node_modules/
+coverage/
+storybook-static/
+build/
+docs/
+reports/
+.history/
+out/
