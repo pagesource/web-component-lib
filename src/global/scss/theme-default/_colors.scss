@@ -1,0 +1,57 @@
+/* ----------------------------------------------------------------------------- *\
+   DEFAULT COLOR PALLETTE
+\* ----------------------------------------------------------------------------- */
+:root {
+  //Base Colors
+  --black: #000;
+  --light-black: #252525;
+  --white: #fff;
+  --grey: #777;
+  --light-grey: #d8dce3;
+  --lightest-grey: #f4f5f6;
+  --turquoise: #06466d;
+  --charcoal: #363c48;
+  --teal: #00799a;
+  --amber: #f09924;
+  --green: #69bc36;
+  //Contextual Colors
+  --color-error: #df4036;
+  --color-warning: #ffc61d;
+  --disabled-text-color: #b0b5bd;
+  --helper-text: #5e636c;
+
+  /* ----------------------------------------------------------------------------- *\
+   BRAND COLOR PALLETTE
+\* ----------------------------------------------------------------------------- */
+
+  --color-primary: var(--charcoal);
+  --color-secondary: var(--white);
+  --color-highlight: var(--grey);
+
+  //border
+  --border-color-primary: var(--charcoal);
+  --border-color-secondary: var(--white);
+  --border-color-focus: var(--grey);
+  --border-color-error: var(--color-error);
+
+  //background
+  --bg-color-primary: var(--charcoal);
+  --bg-color-primary-hover: var(--light-black);
+  --bg-color-secondary: var(--white);
+  --bg-color-highlight: var(--grey);
+  --bg-color-light: var(--light-grey);
+
+  //links
+  --link-color-primary: var(--charcoal);
+  --link-color-secondary: var(--white);
+  --link-color-highlight: var(--grey);
+  --link-color-disabled: var(--grey);
+
+  //text
+  --text-color-primary: var(--charcoal);
+  --text-color-secondary: var(--white);
+
+  //input
+  --border-color-input: var(--light-grey);
+  --bg-color-input: var(--white);
+}

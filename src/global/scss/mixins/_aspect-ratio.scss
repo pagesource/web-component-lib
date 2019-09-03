@@ -1,0 +1,29 @@
+@mixin get-aspect-ratio($width, $height) {
+  padding-top: ($height / $width) * 100%;
+}
+
+@mixin aspect-ratio($width, $height, $withinViewport) {
+  position: relative;
+
+  // Optionally prevent overall height from exceeding viewport height:
+  @if $withinViewport {
+    max-width: $width / $height * 100vh;
+  }
+
+  // Pseudo element to apply the aspect ratio sizing:
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    @include get-aspect-ratio($width, $height);
+  }
+
+  // Force the content element to fit the available space:
+  > *:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

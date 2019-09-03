@@ -1,0 +1,4 @@
+@mixin get-container($viewport) {
+  margin: 0 auto;
+  @include get-theme($responsive-container, $viewport);
+}

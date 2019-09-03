@@ -1,0 +1,9 @@
+@mixin get-flex-align($justify-content: flex-start, $align-items: start) {
+  display: flex;
+  @if ($align-items != start) {
+    align-items: $align-items;
+  }
+  @if ($justify-content != flex-start) {
+    justify-content: $justify-content;
+  }
+}

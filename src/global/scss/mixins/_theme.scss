@@ -1,0 +1,5 @@
+@mixin get-theme($map, $type) {
+  @each $key, $value in get-theme-map($map, $type) {
+    #{$key}: $value;
+  }
+}

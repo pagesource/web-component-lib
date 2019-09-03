@@ -1,0 +1,31 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { text } from '@storybook/addon-knobs';
+import { withReadme } from 'storybook-readme';
+// Load component readme file:
+import readmeFile from './readme.md';
+
+storiesOf('wc-{{ name }}', module)
+.addDecorator(withReadme(readmeFile))
+.addParameters({
+info: {
+text: readmeFile
+}
+})
+.add('{{ name }} with all slots filled', () => {
+const hrefUrl = text('href', 'https://www.google.com');
+const href = hrefUrl ? hrefUrl : '';
+const props = {
+href
+};
+
+return (
+<wc-{{ name }} {...props} mode="default">
+  <img alt='product' slot="media" src={text(`img url`, 'http://someimage.com' )} />
+  <h1 slot="heading">{text('heading text', 'heading')}</h1>
+  <p slot="body">{text('body text', 'body')}</p>
+  <p slot="feature">{text('feature text', 'feature')}</p>
+  <button slot="action">{text('action text', 'action')}</button>
+</wc-{{ name }}>
+)
+});

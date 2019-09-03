@@ -1,0 +1,180 @@
+:root {
+  --font-primary: 'Helvetica Neue';
+  --font-secondary: 'Arial, sans-serif';
+  --font-family-base: var(--font-primary);
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+}
+
+//Fonts
+$typography: (
+  lg: (
+    h1: (
+      font-family: var(--font-primary),
+      font-size: 72px,
+      font-weight: bold,
+      line-height: 1.2222222222
+    ),
+    h2: (
+      font-family: var(--font-primary),
+      font-size: 48px,
+      font-weight: bold,
+      line-height: 1.2083333333
+    ),
+    h3: (
+      font-family: var(--font-primary),
+      font-size: 36px,
+      font-weight: bold,
+      line-height: 1.2222222222
+    ),
+    h4: (
+      font-family: var(--font-primary),
+      font-size: 32px,
+      font-weight: bold,
+      line-height: 1.21875
+    ),
+    p: (
+      font-family: var(--font-primary),
+      font-size: 16px,
+      line-height: 1.5
+    ),
+    small: (
+      font-family: var(--font-primary),
+      font-size: 14px,
+      line-height: 1.1428571429
+    ),
+    label: (
+      font-family: var(--font-primary),
+      font-size: 14px,
+      line-height: 1.1428571429
+    ),
+    link: (
+      font-family: var(--font-primary),
+      font-size: 16px,
+      line-height: 1.5
+    ),
+    button: (
+      font-size: 11px
+    ),
+    em: (
+      font-size: 16px
+    ),
+    input: (
+      font-size: 16px,
+      font-family: var(--font-family-base)
+    )
+  ),
+  md: (
+    h1: (
+      font-family: var(--font-primary),
+      font-size: 56px,
+      font-weight: bold,
+      line-height: 1.2321428571
+    ),
+    h2: (
+      font-family: var(--font-primary),
+      font-size: 40px,
+      font-weight: bold,
+      line-height: 1.225
+    ),
+    h3: (
+      font-family: var(--font-primary),
+      font-size: 32px,
+      font-weight: bold,
+      line-height: 1.21875
+    ),
+    h4: (
+      font-family: var(--font-primary),
+      font-size: 28px,
+      font-weight: bold,
+      line-height: 1.2142857143
+    ),
+    p: (
+      font-size: 18px,
+      font-weight: 300
+    ),
+    small: (
+      font-size: 15px,
+      line-height: 1.31
+    ),
+    link: (
+      font-size: 16px
+    ),
+    button: (
+      font-size: 11px
+    ),
+    label: (
+      font-size: 16px,
+      font-weight: 500,
+      line-height: 1.38
+    ),
+    em: (
+      font-size: 16px
+    ),
+    input: (
+      font-size: 14px,
+      font-family: var(--font-family-base)
+    )
+  ),
+  sm: (
+    h1: (
+      font-family: var(--font-primary),
+      font-size: 40px,
+      line-height: 1.225,
+      font-weight: bold
+    ),
+    h2: (
+      font-family: var(--font-primary),
+      font-size: 32px,
+      line-height: 1.21875,
+      font-weight: bold
+    ),
+    h3: (
+      font-family: var(--font-primary),
+      font-size: 28px,
+      line-height: 1.2142857143,
+      font-weight: bold
+    ),
+    h4: (
+      font-family: var(--font-primary),
+      font-size: 24px,
+      line-height: 1.2083333333,
+      font-weight: bold
+    ),
+    p: (
+      font-size: 18px,
+      line-height: 1.2,
+      font-weight: 300
+    ),
+    small: (
+      font-size: 12px,
+      font-weight: 300,
+      line-height: 1.31
+    ),
+    label: (
+      font-size: 16px,
+      font-weight: 500,
+      line-height: 1.38
+    ),
+    button: (
+      font-size: 11px,
+      line-height: 0.625
+    ),
+    link: (
+      font-size: 14px,
+      letter-spacing: 0.125rem
+    ),
+    em: (
+      font-size: 16px
+    ),
+    input: (
+      font-size: 14px,
+      font-family: var(--font-family-base)
+    ),
+    body: (
+      font-family: var(--font-family-base),
+      font-size: var(--font-size-base),
+      line-height: var(--line-height-base)
+    )
+  )
+);

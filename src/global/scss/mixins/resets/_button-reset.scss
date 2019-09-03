@@ -1,0 +1,6 @@
+@mixin get-button-reset() {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-family-base);
+}

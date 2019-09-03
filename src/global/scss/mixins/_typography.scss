@@ -1,0 +1,6 @@
+// Mixins to simplify and standardize inclusion of typography styles.
+@mixin get-typography($map, $type) {
+  @each $key, $value in get-theme-map(map-get($typography, $map), $type) {
+    #{$key}: $value;
+  }
+}

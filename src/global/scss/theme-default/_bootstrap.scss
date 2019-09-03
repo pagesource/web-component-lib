@@ -1,0 +1,6 @@
+// Bootstrap: Minimal mix-ins and config:
+// WARNING: Be careful to only import *helpers* here, ie definitions of mix-ins and functions.
+// DO NOT IMPORT ANYTHING THAT WILL GENERATE ACTUAL CSS IN THIS FILE.
+@import '../../../../node_modules/bootstrap/scss/functions';
+@import '../../../../node_modules/bootstrap/scss/mixins';
+@import '../../../../node_modules/bootstrap/scss/variables';

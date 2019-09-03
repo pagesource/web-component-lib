@@ -1,0 +1,10 @@
+// Typical usage:
+// *,
+// *:before,
+// *:after {
+//   @include typography-reset();
+// }
+
+@mixin get-typography-reset() {
+  -webkit-font-smoothing: antialiased;
+}

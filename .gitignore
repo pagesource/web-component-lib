@@ -1,6 +1,7 @@
 dist/
 www/
 storybook-static/
+loader/
 
 *~
 *.sw[mnpcod]

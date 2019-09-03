@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["lable", "smart"],
+  "editor.formatOnSave": true,
+  "javascript.autoClosingTags": true,
+  "javascript.suggestionActions.enabled": true
+}

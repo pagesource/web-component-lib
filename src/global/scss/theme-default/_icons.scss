@@ -1,0 +1,11 @@
+// recommended css properties to display svg icons are: background, width, height.
+$svgs: (
+  plus: (
+    background: right 0px top 46% no-repeat url('../../../assets/svg/accordion-plus.svg'),
+    width: 20px
+  ),
+  minus: (
+    background: right 0px top 46% no-repeat url('../../../assets/svgs/accordion-minus.svg'),
+    width: 20px
+  )
+);

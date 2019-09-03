@@ -1,7 +1,7 @@
 {
-  "name": "@xt-pagesource/web-component-library",
+  "name": "@xt-pagesource/web-component-lib",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A collection of generic web components built with StencilJS",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -9,21 +9,46 @@
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/web-component-library/web-component-library.js",
+  "unpkg": "dist/web-component-lib/web-component-lib.js",
   "files": [
     "dist/",
     "loader/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagesource/web-component-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pagesource/web-component-lib/issues"
+  },
+  "keywords": [
+    "Web Components",
+    "Stencil",
+    "Pattern Lib",
+    "Living Style Guide"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
+    "clean": "rimraf dist && rimraf www",
+    "build": "npm run clean && stencil build --docs",
+    "start": "npm run clean && stencil build --dev --watch --serve",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "npm run clean && stencil test --spec --snapshot",
+    "test:e2e": "npm run clean && stencil test --e2e --screenshot",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
+    "test:update": "npm run clean && stencil test --spec -u",
+    "generate": "plop --plopfile generators/index.js",
     "lint": "yarn run lint:ts && yarn run lint:style",
     "lint:ts": "tslint 'src/**/**/*.{ts,tsx}'",
     "lint:tsfix": "tslint --fix 'src/**/**/*.{ts,tsx}'",
-    "lint:style": "stylelint 'src/**/*.scss' --fix"
+    "lint:style": "stylelint 'src/**/*.scss' --fix",
+    "verify": "npm run lint && npm run test",
+    "prettify": "prettier --write",
+    "run-storybook": "start-storybook -p 6006",
+    "storybook": "concurrently \"yarn:start\" \"yarn:run-storybook\" ",
+    "storybook:build": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -32,12 +57,20 @@
     "@stencil/core": "^1.3.0",
     "@stencil/postcss": "^1.0.1",
     "@stencil/sass": "^1.0.1",
+    "@storybook/addon-a11y": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addon-options": "^5.1.11",
+    "@storybook/addon-viewport": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "@types/autoprefixer": "^9.6.1",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.2",
     "@types/puppeteer": "^1.19.1",
     "auto-changelog": "^1.15.0",
     "autoprefixer": "9.6.1",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^4.1.2",
     "husky": "^3.0.4",
     "jest": "24.8.0",
     "jest-cli": "24.8.0",
@@ -49,6 +82,10 @@
     "postcss-url": "^8.0.0",
     "prettier": "^1.18.2",
     "puppeteer": "^1.19.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "storybook-addon-jsx": "^7.1.6",
+    "storybook-readme": "^5.0.8",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-scss": "^3.10.0",
@@ -57,5 +94,9 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "classnames": "^2.2.6"
+  }
 }

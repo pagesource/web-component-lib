@@ -1,0 +1,18 @@
+import { newSpecPage } from '@stencil/core/dist/testing';
+
+import {{ name }} from './{{ name }}';
+
+const compMarkup = `<wc-{{ name }} heading="About the collection" active="false"></wc-{{ name }}>`;
+
+describe('{{ name }} Spec Tests >>>', () => {
+it('should render a {{ name }} Component', async () => {
+const page = await newSpecPage({
+html: compMarkup,
+components: [{{ name }}],
+supportsShadowDom: false
+});
+expect(page.root).not.toBeNull();
+// snapshot testing
+expect(page.root).toMatchSnapshot();
+});
+});

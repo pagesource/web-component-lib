@@ -1,0 +1,10 @@
+// Typical usage:
+// *,
+// *:before,
+// *:after {
+//   @include box-model-reset();
+// }
+
+@mixin get-box-model-reset() {
+  box-sizing: border-box;
+}

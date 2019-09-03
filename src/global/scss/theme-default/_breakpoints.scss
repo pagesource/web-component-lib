@@ -1,0 +1,64 @@
+:root {
+  //Desktop
+  --desktop-max-width: 1170px;
+  --desktop-gutter: 30px;
+  --desktop-vertical-space: 50px;
+  //Tablet
+  --tablet-max-width: 991px;
+  --tablet-gutter: 15px;
+  --tablet-vertical-space: 40px;
+  //Mobile
+  --mobile-max-width: 100%;
+  --mobile-vertical-space: 30px;
+  --mobile-gutter: 15px;
+}
+
+$responsive-container: (
+  sm: (
+    max-width: var(--mobile-max-width),
+    padding-left: var(--mobile-gutter),
+    padding-right: var(--mobile-gutter),
+    margin-bottom: var(--mobile-vertical-space)
+  ),
+  md: (
+    max-width: var(--tablet-max-width),
+    padding-left: var(--tablet-gutter),
+    padding-right: var(--tablet-gutter),
+    margin-bottom: var(--tablet-vertical-space)
+  ),
+  lg: (
+    max-width: var(--desktop-max-width),
+    padding-left: var(--desktop-gutter),
+    padding-right: var(--desktop-gutter),
+    margin-bottom: var(--desktop-vertical-space)
+  )
+);
+
+$breakpoints: (
+  sm: (
+    min: 320px,
+    max: 767px
+  ),
+  md: (
+    min: 768px,
+    max: 991px
+  ),
+  lg: (
+    min: 992px,
+    max: 1199px
+  ),
+  xl: (
+    min: 1200px
+  )
+);
+
+// Bootstrap Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 0,
+  sm: get-theme-map($breakpoints, sm, min),
+  md: get-theme-map($breakpoints, md, min),
+  lg: get-theme-map($breakpoints, lg, min),
+  xl: get-theme-map($breakpoints, xl, min)
+) !default;
