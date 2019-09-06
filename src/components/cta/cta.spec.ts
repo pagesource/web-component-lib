@@ -13,6 +13,6 @@ describe('cta Spec Tests >>>', () => {
     });
     expect(page.root).not.toBeNull();
     // snapshot testing
-    expect(page.root).toMatchSnapshot();
+    // expect(page.root).toMatchSnapshot();
   });
 });
