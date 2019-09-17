@@ -2,7 +2,7 @@ import { newSpecPage } from '@stencil/core/dist/testing';
 
 import { CtaComponent } from './cta';
 
-const compMarkup = `<wc-cta heading="About the collection" active="false"></wc-cta>`;
+const compMarkup = `<wc-cta></wc-cta>`;
 
 describe('cta Spec Tests >>>', () => {
   it('should render a cta Component', async () => {

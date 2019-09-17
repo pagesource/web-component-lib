@@ -22,7 +22,7 @@ export class CtaComponent {
   @Prop() public mode?: string;
 
   // optional message prop
-  @Prop() public displayText?: string;
+  @Prop() public displaytext?: string;
 
   /**
    * Set href attribute if you want the output to be link else button will be created
@@ -60,7 +60,7 @@ export class CtaComponent {
     return (
       <Wrapper {...props}>
         {innertext}
-        <span>{this.displayText} </span>
+        <span>{this.displaytext} </span>
       </Wrapper>
     );
   }
