@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cta Spec Tests >>> should render a cta Component 1`] = `
+<wc-cta active="false" heading="About the collection">
+  <!---->
+  <button>
+    button
+    <span></span>
+  </button>
+</wc-cta>
+`;

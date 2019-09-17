@@ -60,7 +60,7 @@ export class CtaComponent {
     return (
       <Wrapper {...props}>
         {innertext}
-        <div>{this.message} </div>
+        <span>{this.message} </span>
       </Wrapper>
     );
   }
