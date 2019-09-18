@@ -3,9 +3,6 @@
 exports[`cta Spec Tests >>> should render a cta Component 1`] = `
 <wc-cta>
   <!---->
-  <button>
-    button
-    <span></span>
-  </button>
+  <button></button>
 </wc-cta>
 `;

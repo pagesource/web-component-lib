@@ -23,19 +23,10 @@ export class CtaComponent {
 
   // optional message prop
   @Prop() public displaytext?: string;
-
   /**
    * Set href attribute if you want the output to be link else button will be created
    */
   @Prop() public href?: string;
-  /**
-   * Set default text content if not passed while link tag is generated
-   */
-  @Prop() public link: string = 'link';
-  /**
-   * Set default text content if not passed while button tag is generated
-   */
-  @Prop() public button: string = 'button';
 
   public render() {
     let props = {};
@@ -43,11 +34,6 @@ export class CtaComponent {
      * Choose if href is passed in tag then a tag is generated else button tag is generated
      */
     const Wrapper: any = this.href ? 'a' : 'button';
-    /**
-     * Pass inner content depending upon type of tag created
-     */
-    const innertext: any = this.href ? this.link : this.button;
-
     /**
      * Set href props
      */
@@ -59,8 +45,8 @@ export class CtaComponent {
     }
     return (
       <Wrapper {...props}>
-        {innertext}
-        <span>{this.displaytext} </span>
+        <slot></slot>
+        {this.displaytext}
       </Wrapper>
     );
   }
