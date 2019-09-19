@@ -22,9 +22,32 @@ export class CtaComponent {
   @Prop() public mode?: string;
 
   // optional message prop
-  @Prop() public message?: string;
+  @Prop() public displaytext?: string;
+  /**
+   * Set href attribute if you want the output to be link else button will be created
+   */
+  @Prop() public href?: string;
 
   public render() {
-    return <div>{this.message}</div>;
+    let props = {};
+    /**
+     * Choose if href is passed in tag then a tag is generated else button tag is generated
+     */
+    const Wrapper: any = this.href ? 'a' : 'button';
+    /**
+     * Set href props
+     */
+
+    if (this.href) {
+      props = {
+        href: this.href
+      };
+    }
+    return (
+      <Wrapper {...props}>
+        <slot></slot>
+        {this.displaytext}
+      </Wrapper>
+    );
   }
 }
